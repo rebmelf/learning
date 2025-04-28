@@ -1,4 +1,6 @@
 # Learning material for developers
 
 Folder structure:
-- basics: basic concepts
+- basics:
+  - Time and Space Complexity
+  - Core Data Structures  
