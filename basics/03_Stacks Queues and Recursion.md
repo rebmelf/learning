@@ -119,3 +119,37 @@ Every time a function calls itself:
 7. Count the number of digits in a number
 8. Find the maximum in a list recursively
 9. Sum of digits of a number
+
+# Programming Heap - Stack
+
+## Definitions
+- The **heap** is a region of memory used for **dynamic allocation** — where data is stored for as long as you want.
+- The **stack** is a memory region that keeps track of **function calls and local variables**.
+
+- When you use something like `new` in Java or allocate objects in Python, that memory comes from the **heap**.
+    
+- The heap is **flexible** in size and content, but:
+    - It is **slower** to access than stack memory.
+    - You must **manually manage** memory in lower-level languages (e.g. `malloc`/`free` in C).
+    - In high-level languages (like Java, Python), the **garbage collector** cleans unused heap memory.
+
+- Every time a function is called, a new **stack frame** is pushed onto the call stack.
+    - It stores:
+	    - Function parameters
+	    - Local variables
+	    - Return addresses
+- When a function returns, its stack frame is **popped**.
+
+The stack is:
+- **Fast** (LIFO structure, very efficient)
+- **Fixed size** (can cause stack overflow)
+- **Automatically managed**
+
+| Feature           | Stack                           | Heap                                   |
+| ----------------- | ------------------------------- | -------------------------------------- |
+| Purpose           | Function calls, local variables | Dynamically allocated objects          |
+| Memory management | Automatic (Push/pop)            | Manual or garbage-collected            |
+| Speed             | Very fast                       | Slower                                 |
+| Lifespan          | Ends when function ends         | Lasts until freed or garbage-collected |
+| Structure         | LIFO(Last in, First Out)        | No enforced order                      |
+| Overflow risk     | Stack overflow (too many calls) | Out of memory (if too much allocation) |
